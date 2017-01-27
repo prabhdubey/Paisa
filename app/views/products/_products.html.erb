@@ -1,0 +1,43 @@
+<!--content-->
+	<div class="product">
+		<div class="container">
+			
+		  <%if @products.empty?%>	
+			<div class="spec ">
+				<h3>No Products Found !! </h3>
+				<div class="ser-t">
+					<b></b>
+				</div>
+			</div>
+		  <%else%>	
+				<div class=" con-w3l">
+				    <%@products.each do |pro| %>
+							<div class="col-md-3 pro-1">
+								<div class="col-m">
+
+								<div class="redcrcl"><div class="mainred"><b><%=pro.dis_per%>%</b><br><span class = "of">Off</span></div></div>
+								<a href="#" data-toggle="modal" data-target="#myModal_<%=pro.id%>" class="offer-img">
+										<img src="<%=pro.avatar%>" class="img-responsive" alt="">
+									</a>
+									<div class="mid-1">
+										<div class="women">
+											<h6><a href="single.html"><%=pro.name%></a></h6>							
+										</div>
+										<div class="mid-2">
+											<p ><label>Rs.<%=pro.actual_price%></label><em class="item_price">Rs.<%=pro.dis_price%></em></p>
+											  
+											<div class="clearfix"></div>
+										</div>
+											<div class="add add-2">
+										   		<%= button_to "Grab Deal", pro.url,:class => "btn-lg btn-success", :method => :get %>
+										    </div>
+									</div>
+								</div>
+							</div>
+					<%end%>		
+
+							<div class="clearfix"></div>
+				</div>
+			<%end%>	
+		</div>
+	</div>
