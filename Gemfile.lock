@@ -120,6 +120,7 @@ GEM
       activesupport (>= 3.0.0)
       cocaine (~> 0.5.3)
       mime-types
+    pg (0.18.4)
     puma (3.6.2)
     rack (2.0.1)
     rack-pjax (1.0.0)
@@ -229,6 +230,7 @@ DEPENDENCIES
   mysql2 (>= 0.3.18, < 0.5)
   open_uri_redirections
   paperclip (~> 4.1.1)
+  pg (~> 0.18.4)
   puma (~> 3.0)
   rails (~> 5.0.1)
   rails_admin (~> 1.0)
@@ -242,4 +244,4 @@ DEPENDENCIES
   will_paginate-bootstrap
 
 BUNDLED WITH
-   1.13.6
+   1.14.3
